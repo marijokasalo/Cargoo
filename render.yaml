@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: cargoo-frontend
+    env: node
+    plan: free
+    buildCommand: cd frontend.github.io && npm install && npm run build
+    startCommand: cd frontend.github.io && npm run serve
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+  - type: web
+    name: cargoo-backend
+    env: node
+    plan: free
+    buildCommand: cd backend.github.io && npm install
+    startCommand: cd backend.github.io && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: <your-mongodb-uri>
+      - key: SECRET_KEY
+        value: <your-secret-key>
