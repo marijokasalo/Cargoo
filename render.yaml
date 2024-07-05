@@ -22,6 +22,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        value: <your-mongodb-uri>
+        value: mongodb+srv://mkasalo:gm1pN7D2kOyZEfwX@webapps.cox2ypd.mongodb.net/
       - key: SECRET_KEY
-        value: <your-secret-key>
+        value: yMCeGsvTXDx4PGBMKKheNKTdQ6Ke4J2GX
